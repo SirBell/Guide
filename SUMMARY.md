@@ -1,6 +1,6 @@
 ---
 description: >-
-  Nodevism is an individual blockchain validator Trusted and reliable.
+  Nodevism is an individual blockchain validator Trusted, reliable, and capable PoS Operator.
   Empowering together.
 layout:
   title:
@@ -14,3 +14,4 @@ layout:
   pagination:
     visible: true
 ---
+**Stake with us and stay lazy rich...!**
