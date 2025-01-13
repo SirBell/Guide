@@ -58,7 +58,7 @@ log "SUCCESS" "Port 8080 is now open"
 
 log "INFO" "Downloading node files"
 cd $HOME
-wget https://network3.io/ubuntu-node-v2.1.1.tar.gz
+curl -o ubuntu-node-v2.1.1.tar.gz https://network3.io/ubuntu-node-v2.1.1.tar.gz
 log "SUCCESS" "Download completed"
 if [ ! -f "ubuntu-node-v2.1.1.tar.gz" ]; then
     log "ERROR" "File ubuntu-node-v2.1.1.tar.gz not found. Download might have failed."
