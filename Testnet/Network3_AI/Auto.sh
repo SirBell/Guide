@@ -77,3 +77,4 @@ log "SUCCESS" "Save key and bind"
 server_ip=$(get_server_ip)
 log "INFO" "Your server IP is: $server_ip"
 log "INFO" "Activate the node using this link: https://account.network3.ai/main?o=${server_ip}:8080"
+
