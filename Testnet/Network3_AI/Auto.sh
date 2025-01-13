@@ -60,11 +60,21 @@ log "INFO" "Downloading node files"
 cd $HOME
 wget https://network3.io/ubuntu-node-v2.1.1.tar.gz
 log "SUCCESS" "Download completed"
+if [ ! -f "ubuntu-node-v2.1.1.tar.gz" ]; then
+    log "ERROR" "File ubuntu-node-v2.1.1.tar.gz not found. Download might have failed."
+    exit 1
+fi
+
 
 log "INFO" "Extracting node files to 'Network3' folder"
 mkdir -p $HOME/Network3
 tar -xzf ubuntu-node-v2.1.1.tar.gz -C $HOME/Network3 --strip-components=1
 log "SUCCESS" "Files extracted successfully to 'Network3' folder"
+if [ $? -ne 0 ]; then
+    log "ERROR" "Extraction failed. Please check if the downloaded file is valid."
+    exit 1
+fi
+
 
 log "INFO" "Running node setup script"
 cd $HOME/Network3
